@@ -213,6 +213,7 @@ export default class Dropdown extends Component {
     let currentElement = event.target;
     while (currentElement !== event.currentTarget) {
       if (currentElement.classList.contains(CLASS_OPTION)) {
+        this.optionClicked(currentElement);
         isOption = true;
         break;
       }
